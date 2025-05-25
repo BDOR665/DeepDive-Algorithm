@@ -67,14 +67,15 @@ public class Fire {
             }
         }
 
-        // 논문칸(&)에서 답 출력
+        // 불이 구름이가 위치한 곳까지 도달했을 때 탈출할 수 있는지 판단
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
+                // 구름이가 위치하는 곳
                 if (S[i].charAt(j) == '&') {
                     // 불이 도달하지 않음
                     if (!visited[i][j]){
                         System.out.println(-1);
-                        // 불이 오기 직전까지 머무를 수 있다
+                        // 불이 도달한다면 불이 오기 직전까지 머무를 수 있다
                     } else {
                         System.out.println(dist[i][j] - 1);
                     }
@@ -84,5 +85,4 @@ public class Fire {
             }
         }
     }
-
 }
