@@ -20,14 +20,12 @@ public class TaxiDriverGoorm {
         }
     }
 
-    // // 큐 선언
-    // static Queue<Node> q = new LinkedList<>();
-
     // 상하좌우 좌표
     static int[] dx = {0,0,1,-1};
     static int[] dy = {1,-1,0,0};
 
     static int bfs(int sx, int sy, int ex, int ey){
+        // 큐선언
         Queue<Node> q = new LinkedList<>();
 
         // 인접 행렬 -1로 초기화
